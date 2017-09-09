@@ -1,127 +1,21 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
-import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component';
-import { Container, Header, Content, Text, Thumbnail } from 'native-base';
-import { Col, Row, Grid } from 'react-native-easy-grid';
-import Button from 'apsl-react-native-button'
-import {getSunHours} from "./Functions";
+import React from 'react';
+import { StackNavigator } from 'react-navigation';
+import Step1View from './Step1View';
+import Step2View from './Step2View';
+import HomeView from './HomeView';
 
-
-export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-    };
-
-    getData(){
-        getSunHours();
-    }
-
-  render() {
-        this.getData();
-    return (
-        <View style={styles.container}>
-        <Image source={require('./images/background.png')} style={styles.imageThings} >
-
-            <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                <Text style={styles.stepTextStyle}>Steg 1</Text>
-                <Text style={styles.descriptionTextStyle}>Vart bor du?</Text>
-                <TextInput
-
-                    // Adding hint in Text Input using Place holder.
-                    placeholder="Fyll i här..."
-
-                    // Making the Under line Transparent.
-                    underlineColorAndroid='transparent'
-
-                    // Calling the custom TextInputStyleClass.
-                    style={styles.TextInputStyleClass}/>
-
-
-            </View>
-
-            <View style={[styles.boxContainer, styles.buttonContainer]}>
-                <Button style={styles.buttonStyle} textStyle={styles.textStyle}>
-                    <Text style={styles.buttonTextStyle}>Nästa</Text>
-                </Button>
-            </View>
-
-        </Image>
-        </View>
-
-
-    );
-  }
-}
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-
-  },
-    boxContainer: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
+const SimpleStack = StackNavigator({
+    Home: {
+        screen: HomeView,
     },
-    mainContentContainer: {
-      flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
+    Step1View: {
+        path: 'people/:name',
+        screen: Step1View,
     },
-    buttonContainer: {
-      flex: 1,
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-
-
+    Step2View: {
+        path: 'photos/:name',
+        screen: Step2View,
     },
-    imageThings: {
-        flex: 1,
-        justifyContent: 'center',
-      alignItems: 'center',
-      width: null,
-      height: null,
-      backgroundColor: 'rgba(0,0,0,0)'
-    },
-    stepTextStyle: {
-        color: 'white',
-        fontFamily: 'Helvetica',
-        fontSize: 20,
-        fontWeight: 'bold',
-        paddingBottom: 10
-    },
-    descriptionTextStyle: {
-        color: 'white',
-        fontFamily: 'Helvetica',
-        fontSize: 20,
-        paddingBottom: 60
-    },
-    buttonTextStyle: {
-        color: 'white',
-        fontFamily: 'Helvetica',
-        fontSize: 20
-    },
-    buttonStyle: {
-
-        backgroundColor: 'green',
-        borderColor: 'green',
-        width: 350,
-        height: 60
-    },
-    TextInputStyleClass: {
-        textAlign: 'center',
-        height: 50,
-        width: 300,
-        borderWidth: 2,
-        borderColor: 'green',
-        borderRadius: 10 ,
-        backgroundColor : "#FFFFFF"
-    }
-
-
 });
 
-
-
+export default SimpleStack;

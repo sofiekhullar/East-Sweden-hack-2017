@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
-import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import MaterialsIcon from 'react-native-vector-icons/MaterialIcons';
-import { Sae } from 'react-native-textinput-effects';
 import {getSunHours} from "./Functions";
 
 export default class Lutning extends React.Component {
