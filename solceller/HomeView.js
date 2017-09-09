@@ -1,5 +1,4 @@
 import React from 'react';
-import HomeViewNav from './Navigation/HomeViewNav';
 import {View, Text, Button} from 'react-native';
 
 class HomeView extends React.Component{

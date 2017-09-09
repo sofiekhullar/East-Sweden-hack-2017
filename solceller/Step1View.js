@@ -42,7 +42,6 @@ class Step1View extends Component {
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
                     </View>
-
                 </Image>
             </View>
         );
@@ -53,6 +52,7 @@ Step1View.navigationOptions = {
     title: 'Hack solceller sweden',
     header: null
 };
+
 export default Step1View;
 
 const styles = StyleSheet.create({
