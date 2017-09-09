@@ -6,9 +6,19 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 //import Button from 'apsl-react-native-button'
 //import CircleButton from 'react-native-circle-button';
 //import Button from 'react-native-button';
+import {getSunHours} from "./Functions";
 
 export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+    };
+
+    getData(){
+        getSunHours();
+    }
+
   render() {
+        this.getData();
     return (
 
         <Container>
