@@ -8,6 +8,11 @@ class HomeView extends React.Component{
     render(){
         return(
             <View>
+                <Text/>
+                <Text/>
+                <Text/>
+                <Text/>
+                <Text/>
                 <Text>This is homeview</Text>
                 <Button
                     onPress={() => this.props.navigation.navigate('Step1View', { name: 'Jane' })}

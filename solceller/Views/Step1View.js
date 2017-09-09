@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
+import {StyleSheet, View, ScrollView, Image, TextInput, TouchableOpacity} from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
@@ -36,11 +36,13 @@ class Step1View extends Component {
                     </View>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
+                        <TouchableOpacity disabled={false}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
                                 onPress={() => this.props.navigation.navigate('Step2View', { name: 'Jane' })}
                                 title="Press here!">
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
+                        </TouchableOpacity>
                     </View>
                 </Image>
             </View>

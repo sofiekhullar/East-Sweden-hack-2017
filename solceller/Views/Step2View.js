@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
+import {StyleSheet, View, ScrollView, Image, TextInput} from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
@@ -50,7 +50,9 @@ export default class Step2View extends React.Component {
 
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
-                        <Button style={styles.buttonStyle} textStyle={styles.textStyle}>
+                        <Button style={styles.buttonStyle} textStyle={styles.textStyle}
+                                onPress={() => this.props.navigation.navigate('Step3View', { name: 'Jane' })}
+                                title="Press here!">
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
                     </View>
@@ -72,7 +74,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-
     },
     boxContainer: {
         flex: 1,
