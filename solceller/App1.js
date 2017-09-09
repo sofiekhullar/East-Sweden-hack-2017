@@ -4,10 +4,12 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import MaterialsIcon from 'react-native-vector-icons/MaterialIcons';
+import { Sae } from 'react-native-textinput-effects';
 import {getSunHours} from "./Functions";
 
-
-export default class App extends React.Component {
+export default class Lutning extends React.Component {
     constructor(props) {
         super(props);
     };
@@ -23,21 +25,33 @@ export default class App extends React.Component {
         <Image source={require('./images/background.png')} style={styles.imageThings} >
 
             <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                <Text style={styles.stepTextStyle}>Steg 1</Text>
-                <Text style={styles.descriptionTextStyle}>Vart bor du?</Text>
-                <TextInput
+                <Text style={styles.stepTextStyle}>Steg 2</Text>
+                <Text style={styles.descriptionTextStyle}>Vad har du för lutning på ditt tak?</Text>
+            </View>
 
-                    // Adding hint in Text Input using Place holder.
-                    placeholder="Fyll i här..."
-
-                    // Making the Under line Transparent.
-                    underlineColorAndroid='transparent'
-
-                    // Calling the custom TextInputStyleClass.
-                    style={styles.TextInputStyleClass}/>
-
+            <View style={{flexDirection: 'row', flex: 1}}>
+            <View style={styles.wordContainer}>
+                <Image
+                    style={{width: 100, height: 100}}
+                    source={require('./images/lutning1.png')}
+                />
+                <Image
+                    style={{width: 100, height: 100}}
+                    source={require('./images/lutning2.png')}
+                />
+                <Image
+                    style={{width: 100, height: 100}}
+                    source={require('./images/lutning3.png')}
+                />
+            </View>
+            <View style={styles.item2}>
+                <Text style={{paddingTop:20}}> 0-10 grader </Text>
+                <Text> 10-30 grader </Text>
+                <Text> 30-60 grader </Text>
 
             </View>
+            </View>
+
 
             <View style={[styles.boxContainer, styles.buttonContainer]}>
                 <Button style={styles.buttonStyle} textStyle={styles.textStyle}>
@@ -118,10 +132,52 @@ const styles = StyleSheet.create({
         borderColor: 'green',
         borderRadius: 10 ,
         backgroundColor : "#FFFFFF"
+    },
+    wordContainer:{
+
+        flexDirection: 'column',
+
+
+    },item2:{
+        flexDirection:'column',
     }
 
 
 });
 
+/*
+return (
+    <Container>
+        <View style={styles.container}>
+            <View style={[styles.boxContainer, styles.mainContentContainer]}>
+            </View>
+            <View style={[styles.boxContainer, styles.buttonContainer]}>
+
+                <Button block success>
+                    <Text>Success</Text>
+                </Button>
+            </View>
+        </View>
+
+    </Container>
+);
+
+        <Container>
+                <Image
+                    source={require('./images/background.png')}
+                    style={styles.imageThings}>
+            <Header />
+            <Content>
+                <Grid>
+                    <Col style={{ backgroundColor: '#635DB7', height: 500 }}>
+                    </Col>
+                </Grid>
+
+            </Content>
+                    <Button block success large >
+                        <Text>Nästa</Text>
+                    </Button>
+        </Image>
+        </Container>*/
 
 
