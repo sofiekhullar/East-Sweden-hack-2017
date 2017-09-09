@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import {getSunHours} from "./Functions";
+import {getSunHours} from "../assets/Functions";
 
 class Step1View extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class Step1View extends Component {
         this.getData();
         return (
             <View style={styles.container}>
-                <Image source={require('./images/background.png')} style={styles.imageThings} >
+                <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
                         <Text style={styles.stepTextStyle}>Steg 1</Text>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-import Step1View from './Step1View';
-import Step2View from './Step2View';
-import HomeView from './HomeView';
+import Step1View from './Views/Step1View';
+import Step2View from './Views/Step2View';
+import HomeView from './Views/HomeView';
 
 const SimpleStack = StackNavigator({
     Home: {

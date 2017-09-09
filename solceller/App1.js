@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import {getSunHours} from "./Functions";
+import {getSunHours} from "./assets/Functions";
 
 export default class Lutning extends React.Component {
     constructor(props) {

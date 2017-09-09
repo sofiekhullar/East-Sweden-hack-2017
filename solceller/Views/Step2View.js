@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView, Image, TextInput } from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import {getSunHours} from "./Functions";
+import {getSunHours} from "../assets/Functions";
 
 export default class Step2View extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export default class Step2View extends React.Component {
         this.getData();
         return (
             <View style={styles.container}>
-                <Image source={require('./images/background.png')} style={styles.imageThings} >
+                <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
                         <Text style={styles.stepTextStyle}>Steg 2</Text>
@@ -29,15 +29,15 @@ export default class Step2View extends React.Component {
                         <View style={styles.wordContainer}>
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/lutning1.png')}
+                                source={require('../images/lutning1.png')}
                             />
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/lutning2.png')}
+                                source={require('../images/lutning2.png')}
                             />
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/lutning3.png')}
+                                source={require('../images/lutning3.png')}
                             />
                         </View>
                         <View style={styles.item2}>
