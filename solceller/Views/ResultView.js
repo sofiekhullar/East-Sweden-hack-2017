@@ -26,6 +26,9 @@ class ResultView extends React.Component{
         this.props.navigation.navigate('Home');
     }
 
+    navigateBack(){
+        this.props.navigation.navigate('Step4View');
+    }
     render(){
         return(
 
@@ -82,6 +85,7 @@ class ResultView extends React.Component{
                             <Text style={styles.buttonTextStyle}>Done</Text>
                         </Button>
                     </View>
+                    <Text style={{marginBottom:"5%"}} onPress={() => this.navigateBack()}>Back</Text>
                 </Image>
             </View>
         )

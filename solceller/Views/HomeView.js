@@ -18,7 +18,8 @@ class HomeView extends React.Component{
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
                     <View style={styles.viewStyle}>
-                        <Text style={styles.stepTextStyle}>Welcome</Text>
+                        <Image source={require('../images/logo.png')} style={{width: 200, height: 39}} >
+                        </Image>
                     </View>
 
                     <View style={styles.viewStyle}>
