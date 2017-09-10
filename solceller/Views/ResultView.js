@@ -31,56 +31,57 @@ class ResultView extends React.Component{
 
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
-                <View style={[styles.boxContainer, styles.boxOne]}>
                     <View style={[styles.boxContainer, styles.boxOne]}>
-                        <Image style={{width:128,height:128}}
-                               source = {require('../images/faceHappy.png')}>
-                        </Image>
-                    </View>
-                    <View style={[styles.boxContainer, styles.boxOne]}>
-                        <Text style={styles.baseText}>
-                            <Text style={styles.titleText} onPress={this.onPressTitle}>
-                                {this.state.mojlighetText}
-                            </Text>
-                        </Text>
-                    </View>
-                </View>
-                <View style={[styles.boxContainer, styles.boxTwo]}>
-                    <View style={[styles.boxContainer, styles.boxTwo]}>
-                        <Text style={styles.baseText}>
-                            <Text style={styles.titleText} onPress={this.onPressTitle}>
-                                {this.state.energiText}
-                            </Text>
-                        </Text>
-                    </View>
-                    <View style={[styles.boxContainer, styles.boxTwo]}>
-                        <Image style={{width:128,height:128}}
-                               source = {require('../images/faceHappy.png')}>
-                        </Image>
 
-                    </View>
-                </View>
-                <View style={[styles.boxContainer, styles.boxThree]}>
-                    <View style={[styles.boxContainer, styles.boxThree]}>
-                        <Image
-                            source = {require('../images/bock.png')}>
-                        </Image>
-                    </View>
-                    <View style={[styles.boxContainer, styles.boxThree]}>
-                        <Text style={styles.baseText}>
-                            <Text style={styles.titleText} onPress={this.onPressTitle}>
-                                {this.state.pengarText}
+                        <View style={[styles.boxContainer, styles.boxOneOne]}>
+                            <Image style={{width:128,height:128}}
+                                   source = {require('../images/faceHappy.png')}>
+                            </Image>
+                        </View>
+                        <View style={[styles.boxContainer, styles.boxOneTwo]}>
+                            <Text style={styles.baseText}>
+                                <Text style={styles.titleText} onPress={this.onPressTitle}>
+                                    {this.state.mojlighetText}
+                                </Text>
                             </Text>
-                        </Text>
+                        </View>
                     </View>
-                </View>
-                <View style={[styles.boxContainer, styles.buttonContainer]}>
-                    <Button style={styles.buttonStyle} textStyle={styles.textStyle}
-                            onPress={() => this.navigate()}
-                            title="Press here!">
-                        <Text style={styles.buttonTextStyle}>Nästa</Text>
-                    </Button>
-                </View>
+                    <View style={[styles.boxContainer, styles.boxTwo]}>
+                        <View style={[styles.boxContainer, styles.boxTwoOne]}>
+                            <Text style={styles.baseText}>
+                                <Text style={styles.titleText} onPress={this.onPressTitle}>
+                                    {this.state.energiText}
+                                </Text>
+                            </Text>
+                        </View>
+                        <View style={[styles.boxContainer, styles.boxTwoTwo]}>
+                            <Image style={{width:128,height:128}}
+                                   source = {require('../images/faceHappy.png')}>
+                            </Image>
+
+                        </View>
+                    </View>
+                    <View style={[styles.boxContainer, styles.boxThree]}>
+                        <View style={[styles.boxContainer, styles.boxThreeOne]}>
+                            <Image
+                                source = {require('../images/bock.png')}>
+                            </Image>
+                        </View>
+                        <View style={[styles.boxContainer, styles.boxThreeTwo]}>
+                            <Text style={styles.baseText}>
+                                <Text style={styles.titleText} onPress={this.onPressTitle}>
+                                    {this.state.pengarText}
+                                </Text>
+                            </Text>
+                        </View>
+                    </View>
+                    <View style={[styles.boxContainer, styles.buttonContainer]}>
+                        <Button style={styles.buttonStyle} textStyle={styles.textStyle}
+                                onPress={() => this.navigate()}
+                                title="Press here!">
+                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                        </Button>
+                    </View>
                 </Image>
             </View>
         )
@@ -101,39 +102,80 @@ const styles = StyleSheet.create({
         flex: 1, // 1:3
         alignItems: 'center',
         justifyContent: 'center',
-        //marginVertical: 15,
+        marginTop: 15,
+
+    },
+    mainContentContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     boxOne: {
         flex: 3, // 3:6
-        //backgroundColor: '#FFEEE4',
+        backgroundColor: 'white',
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
+        backgroundColor: 'rgba(255,255,255,0.7)',
     },
-    buttonTextStyle: {
-        color: 'white',
-        fontFamily: 'Helvetica',
-        fontSize: 20
-    },
-    buttonStyle: {
-        backgroundColor: 'green',
-        borderColor: 'green',
-        width: 350,
-        height: 60
-    },
+
     boxTwo: {
         flex: 3, // 1:6
-        //backgroundColor: '#f1d868',
+        backgroundColor: 'white',
         flexDirection: 'row',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        backgroundColor: 'rgba(255,255,255,0.7)',
     },
     boxThree: {
         flex: 3, // 2:6
         flexDirection: 'row',
         //justifyContent: 'space-between', // main axis
         alignItems: 'flex-start', // cross axis
-        //backgroundColor: '#ceb222',
+        backgroundColor: 'rgba(255,255,255,0.7)',
 
+
+    },
+    boxOneOne: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+    },
+    boxOneTwo: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+    },
+    boxTwoOne: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+    },
+    boxTwoTwo: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+    },
+    boxThreeOne: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+    },
+    boxThreeTwo: {
+        flex: 1, // 3:6
+        backgroundColor: 'rgba(255,255,255,0)',
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
     },
     buttonContainer: {
         flex: 1,
@@ -149,6 +191,17 @@ const styles = StyleSheet.create({
         height: 60
     },
 
+    buttonTextStyle: {
+        color: 'white',
+        fontFamily: 'Helvetica',
+        fontSize: 20
+    },
+    buttonStyle: {
+        backgroundColor: 'green',
+        borderColor: 'green',
+        width: 350,
+        height: 60
+    },
 
     baseText: {
         //fontFamily: 'Cochin',
@@ -157,9 +210,17 @@ const styles = StyleSheet.create({
     },
     titleText: {
         color: 'black',
+
         fontFamily: 'Helvetica',
         fontSize: 20,
         //fontWeight: 'bold',
+        paddingBottom: 10
+    },
+    stepTextStyle: {
+        color: 'white',
+        fontFamily: 'Helvetica',
+        fontSize: 20,
+        fontWeight: 'bold',
         paddingBottom: 10
     },
 
