@@ -15,7 +15,7 @@ class HomeView extends React.Component{
                 <Text/>
                 <Text>This is homeview</Text>
                 <Button
-                    onPress={() => this.props.navigation.navigate('Step1View', { name: 'Jane' })}
+                    onPress={() => this.props.navigation.navigate('Step1View')}
                     title="Press here!"
                 />
             </View>

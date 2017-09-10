@@ -8,10 +8,18 @@ import {getSunHours} from "../assets/Functions";
 class Step1View extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            inputText: ""
+        }
     };
 
     getData(){
         getSunHours();
+    }
+
+    navigate() {
+        this.props.navigation.navigate('Step2View', { address: this.state.inputText });
     }
 
     render() {
@@ -24,7 +32,7 @@ class Step1View extends Component {
                         <Text style={styles.stepTextStyle}>Steg 1</Text>
                         <Text style={styles.descriptionTextStyle}>Vart bor du?</Text>
                         <TextInput
-
+                            onChangeText={(inputText) => this.setState({inputText})}
                             // Adding hint in Text Input using Place holder.
                             placeholder="Fyll i här..."
 
@@ -38,7 +46,7 @@ class Step1View extends Component {
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <TouchableOpacity disabled={false}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
-                                onPress={() => this.props.navigation.navigate('Step2View', { name: 'Jane' })}
+                                onPress={() => this.navigate()}
                                 title="Press here!">
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>

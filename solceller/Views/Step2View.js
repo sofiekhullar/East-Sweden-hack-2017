@@ -3,19 +3,18 @@ import {StyleSheet, View, ScrollView, Image, TextInput} from 'react-native';
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import {getSunHours} from "../assets/Functions";
+
 
 export default class Step2View extends React.Component {
     constructor(props) {
         super(props);
     };
 
-    getData(){
-        getSunHours();
+    navigate(){
+        this.props.navigation.navigate('Step3View', { tilt: 'Jane', address: this.props.navigation.state.params.address});
     }
 
     render() {
-        this.getData();
         return (
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
@@ -51,7 +50,7 @@ export default class Step2View extends React.Component {
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
-                                onPress={() => this.props.navigation.navigate('Step3View', { name: 'Jane' })}
+                                onPress={() => this.navigate()}
                                 title="Press here!">
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
