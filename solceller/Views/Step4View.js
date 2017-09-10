@@ -11,6 +11,10 @@ class Step4View extends React.Component{
         this.props.navigation.navigate('Result');
     }
 
+    navigateBack(){
+        this.props.navigation.navigate('Step2View');
+    }
+
     render(){
         return(
             <View style={styles.container}>
@@ -36,6 +40,7 @@ class Step4View extends React.Component{
                             <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
                     </View>
+                    <Text style={{marginBottom:"5%"}} onPress={() => this.navigateBack()}>Back</Text>
                 </Image>
             </View>
         )

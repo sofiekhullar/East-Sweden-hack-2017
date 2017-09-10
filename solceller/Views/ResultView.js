@@ -17,8 +17,8 @@ class ResultView extends React.Component{
         super(props);
         this.state = {
             mojlighetText: "Du har goda möjligheter för att ha solceller.",
-            energiText: "Du kommer producera 5500 kWh per år.",
-            pengarText: "Du kommer spara 5775 kr per år."
+            energiText: "Du kommer att producera 5500 kWh per år vilket motsvarar 69% av din årliga konsumption.",
+            pengarText: "Du kommer att spara 5775 kr per år. Efter 16 år har du tjänat in din investering."
         };
     }
 
@@ -26,6 +26,9 @@ class ResultView extends React.Component{
         this.props.navigation.navigate('Home');
     }
 
+    navigateBack(){
+        this.props.navigation.navigate('Step4View');
+    }
     render(){
         return(
 
@@ -82,6 +85,7 @@ class ResultView extends React.Component{
                             <Text style={styles.buttonTextStyle}>Done</Text>
                         </Button>
                     </View>
+                    <Text style={{marginBottom:"5%"}} onPress={() => this.navigateBack()}>Back</Text>
                 </Image>
             </View>
         )
