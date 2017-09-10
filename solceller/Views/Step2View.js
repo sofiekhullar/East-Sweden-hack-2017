@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, ScrollView, Image, TextInput} from 'react-native';
-import { Container, Header, Content, Text, Thumbnail } from 'native-base';
+import { StyleSheet, View, ScrollView, Image, TextInput, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { Container, Header, Content, Text, Thumbnail, Alert } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-import Button from 'apsl-react-native-button'
-
+import Button from 'apsl-react-native-button';
 
 export default class Step2View extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            selectedImage: 0
+        }
     };
 
-    navigate(){
-        this.props.navigation.navigate('Step3View', { tilt: 'Jane', address: this.props.navigation.state.params.address});
+    _firstHouse(){
+        this.setState({selectedImage:1});
+    }
+
+    _secondHouse(){
+        this.setState({selectedImage:2});
+    }
+
+    _thirdHouse(){
+        this.setState({selectedImage:3});
+    }
+
+    navigate() {
+        this.props.navigation.navigate('Step3View');
     }
 
     render() {
@@ -24,34 +38,40 @@ export default class Step2View extends React.Component {
                         <Text style={styles.descriptionTextStyle}>Vad har du för lutning på ditt tak?</Text>
                     </View>
 
-                    <View style={{flexDirection: 'row', flex: 1}}>
+                    <View style={{flexDirection: 'row'}}>
                         <View style={styles.wordContainer}>
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('../images/lutning1.png')}
-                            />
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('../images/lutning2.png')}
-                            />
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('../images/lutning3.png')}
-                            />
+                            <TouchableOpacity onPress={this.firstHouse}>
+                                <Image
+                                    style={{width: 100, height: 100}}
+                                    source={require('../images/lutning1.png')}
+                                />
+                            </TouchableOpacity>
+                            <Text></Text>
+                            <TouchableOpacity onPress={this.secondHouse}>
+                                <Image
+                                    style={{width: 100, height: 100}}
+                                    source={require('../images/lutning2.png')}
+                                />
+                            </TouchableOpacity>
+                            <Text></Text>
+                            <TouchableOpacity onPress={this.thirdHouse}>
+                                <Image
+                                    style={{width: 100, height: 100}}
+                                    source={require('../images/lutning3.png')}
+                                />
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.item2}>
-                            <Text style={{paddingTop:20}}> 0-10 grader </Text>
-                            <Text> 10-30 grader </Text>
-                            <Text> 30-60 grader </Text>
+                            <Text style={{paddingTop:40}}> 0-10 grader </Text>
+                            <Text style={{paddingTop:100}}> 10-30 grader </Text>
+                            <Text style={{paddingTop:90}}> 30-60 grader </Text>
 
                         </View>
                     </View>
 
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
-                        <Button style={styles.buttonStyle} textStyle={styles.textStyle}
-                                onPress={() => this.navigate()}
-                                title="Press here!">
+                        <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
                     </View>
@@ -73,6 +93,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
+
     },
     boxContainer: {
         flex: 1,
@@ -104,7 +125,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         fontSize: 20,
         fontWeight: 'bold',
-        paddingBottom: 10
+        paddingTop: 40,
+        paddingBottom: 20
     },
     descriptionTextStyle: {
         color: 'white',
@@ -134,10 +156,15 @@ const styles = StyleSheet.create({
         backgroundColor : "#FFFFFF"
     },
     wordContainer:{
+        flex: 1,
         flexDirection: 'column',
-    },
-    item2:{
-        flexDirection:'column',
-    }
+        justifyContent: 'center',
+        alignItems: 'center',
 
+
+    },item2:{
+        flex: 1,
+        alignItems: 'flex-start',
+
+    }
 });

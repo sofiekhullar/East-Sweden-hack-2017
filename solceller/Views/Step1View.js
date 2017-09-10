@@ -3,7 +3,6 @@ import {StyleSheet, View, ScrollView, Image, TextInput, TouchableOpacity} from '
 import { Container, Header, Content, Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from 'apsl-react-native-button'
-import {getSunHours} from "../assets/Functions";
 
 class Step1View extends Component {
     constructor(props) {
@@ -14,16 +13,11 @@ class Step1View extends Component {
         }
     };
 
-    getData(){
-        getSunHours();
-    }
-
     navigate() {
         this.props.navigation.navigate('Step2View', { address: this.state.inputText });
     }
 
     render() {
-        this.getData();
         return (
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
