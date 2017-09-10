@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
-        backgroundColor: 'rgba(255,255,255,0.7)',
+        backgroundColor: 'rgba(255,255,255,0.5)',
     },
 
     boxTwo: {
@@ -124,14 +124,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flexDirection: 'row',
         alignItems: 'flex-start',
-        backgroundColor: 'rgba(255,255,255,0.7)',
+        backgroundColor: 'rgba(255,255,255,0.5)',
     },
     boxThree: {
         flex: 3, // 2:6
         flexDirection: 'row',
         //justifyContent: 'space-between', // main axis
         alignItems: 'flex-start', // cross axis
-        backgroundColor: 'rgba(255,255,255,0.7)',
+        backgroundColor: 'rgba(255,255,255,0.5)',
 
 
     },
