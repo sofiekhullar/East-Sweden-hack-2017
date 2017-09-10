@@ -29,7 +29,7 @@ export default class Step3View extends React.Component {
     }
 
     render() {
-        let size = 70;
+        let size = 80;
         return (
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
@@ -40,50 +40,45 @@ export default class Step3View extends React.Component {
                     </View>
 
 
-                        <View style={styles.firstContainer}>
-                            <View>
-                            <TouchableOpacity onPress={this.firstHouse}>
-                                <Image
-                                    style={{width: size, height: size}}
-                                    source={require('../images/lutning1.png')}
-                                />
-                            </TouchableOpacity>
+                    <View style={{flex: 1, flexDirection: 'row'}}>
+                            <View style={{flex:1, paddingLeft: '8%'}}>
+                                <TouchableOpacity onPress={this.firstHouse}>
+                                    <Image
+                                        style={{width: size, height: size}}
+                                        source={require('../images/lutning1.png')}
+                                    />
+                                </TouchableOpacity>
                             </View>
-                            <Text></Text>
-                        <View>
-                            <TouchableOpacity onPress={this.secondHouse}>
-                                <Image
-                                    style={{width: size, height: size}}
-                                    source={require('../images/lutning2.png')}
-                                />
-                            </TouchableOpacity>
-                        </View>
-                        </View>
+                            <View style={{flex:1, paddingLeft: '25%'}}>
+                                <TouchableOpacity onPress={this.secondHouse}>
+                                    <Image
+                                        style={{width: size, height: size}}
+                                        source={require('../images/lutning2.png')}
+                                    />
+                                </TouchableOpacity>
+                            </View>
+                    </View>
 
-
-                        <View>
-                            <Text></Text>
-                            <TouchableOpacity onPress={this.thirdHouse}>
-                                <Image
-                                    style={{width: size, height: size}}
-                                    source={require('../images/lutning3.png')}
-                                />
-                            </TouchableOpacity>
-                            <Text></Text>
-                            <TouchableOpacity onPress={this.thirdHouse}>
-                                <Image
-                                    style={{width: size, height: size}}
-                                    source={require('../images/lutning3.png')}
-                                />
-                            </TouchableOpacity>
-                            <Text></Text>
-                            <TouchableOpacity onPress={this.thirdHouse}>
-                                <Image
-                                    style={{width: size, height: size}}
-                                    source={require('../images/lutning3.png')}
-                                />
-                            </TouchableOpacity>
-                        </View>
+                    <View style={{flex: 1, flexDirection: 'row'}}>
+                        <TouchableOpacity style={{paddingLeft: '0%'}} onPress={this.thirdHouse}>
+                            <Image
+                                style={{width: size, height: size}}
+                                source={require('../images/lutning3.png')}
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{paddingLeft: '5%'}} onPress={this.thirdHouse}>
+                            <Image
+                                style={{width: size, height: size}}
+                                source={require('../images/lutning3.png')}
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{paddingLeft: '5%'}}onPress={this.thirdHouse}>
+                            <Image
+                                style={{width: size, height: size}}
+                                source={require('../images/lutning3.png')}
+                            />
+                        </TouchableOpacity>
+                    </View>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
@@ -107,11 +102,9 @@ Step3View.navigationOptions = {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'column',
-
     },
     firstContainer: {
-        flexDirection: 'row',
+        flexDirection: 'row'
     },
     boxContainer: {
         flex: 1,
