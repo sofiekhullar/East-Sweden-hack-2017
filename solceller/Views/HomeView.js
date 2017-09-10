@@ -31,6 +31,7 @@ class HomeView extends React.Component{
                     <View style={styles.viewStyle}>
                     <Button style={styles.buttonStyle} textStyle={styles.textStyle}
                             onPress={() => this.login()}
+                            color="black"
                             title="Login here">
                     </Button>
                     </View>
@@ -56,6 +57,9 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-around',
+    },
+    textStyle: {
+        color: 'black',
     },
     buttonContainer: {
         flex: 1,

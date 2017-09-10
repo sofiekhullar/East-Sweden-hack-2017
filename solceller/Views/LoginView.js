@@ -11,6 +11,10 @@ class LoginView extends React.Component{
         this.props.navigation.navigate('StatsView');
     }
 
+    navigateBack(){
+        this.props.navigation.navigate('Home');
+    }
+
     render(){
         return(
             <View style={styles.container}>
@@ -22,22 +26,26 @@ class LoginView extends React.Component{
 
                     <TextInput
                         onChangeText={(inputText) => this.setState({inputText})}
-                        placeholder="Enter username..."
+                        placeholder="Enter username"
                         underlineColorAndroid='transparent'
                         style={styles.TextInputStyleClass}/>
 
+                    <Text/>
                     <TextInput
                         onChangeText={(inputText) => this.setState({inputText})}
                         secureTextEntry={true}
-                        placeholder="Enter password..."
+                        placeholder="Enter password"
                         underlineColorAndroid='transparent'
                         style={styles.TextInputStyleClass}/>
+                    <Text/>
+                    <Text style={{marginBottom:"5%"}}>Register user</Text>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
                             <Text style={styles.buttonTextStyle}>Login</Text>
                         </Button>
                     </View>
+                    <Text style={{marginBottom:"5%"}} onPress={() => this.navigateBack()}>Back</Text>
                 </Image>
             </View>
         )
