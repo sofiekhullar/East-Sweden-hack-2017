@@ -11,6 +11,7 @@ class HomeView extends React.Component{
     }
     login(){
         console.log('Login should be here');
+        this.props.navigation.navigate('Login');
     }
     render(){
         return(
