@@ -8,20 +8,28 @@ export default class Step2View extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedImage: 0
+            selectedImage1: false,
+            selectedImage2: false,
+            selectedImage3: false
         }
     };
 
-    _firstHouse(){
-        this.setState({selectedImage:1});
+    firstHouse(){
+        this.setState({selectedImage1:false});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:true});
     }
 
-    _secondHouse(){
-        this.setState({selectedImage:2});
+    secondHouse(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:false});
+        this.setState({selectedImage3:true});
     }
 
-    _thirdHouse(){
-        this.setState({selectedImage:3});
+    thirdHouse(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:false});
     }
 
     navigate() {
@@ -40,23 +48,23 @@ export default class Step2View extends React.Component {
 
                     <View style={{flexDirection: 'row'}}>
                         <View style={styles.wordContainer}>
-                            <TouchableOpacity onPress={this.firstHouse}>
+                            <TouchableOpacity onPress={() => this.firstHouse()}>
                                 <Image
-                                    style={{width: 100, height: 100}}
+                                    style={ this.state.selectedImage1 ? styles.imageSelected : styles.image }
                                     source={require('../images/lutning1.png')}
                                 />
                             </TouchableOpacity>
                             <Text></Text>
-                            <TouchableOpacity onPress={this.secondHouse}>
+                            <TouchableOpacity onPress={() => this.secondHouse()}>
                                 <Image
-                                    style={{width: 100, height: 100}}
+                                    style={ this.state.selectedImage2 ? styles.imageSelected : styles.image }
                                     source={require('../images/lutning2.png')}
                                 />
                             </TouchableOpacity>
                             <Text></Text>
-                            <TouchableOpacity onPress={this.thirdHouse}>
+                            <TouchableOpacity onPress={() => this.thirdHouse()}>
                                 <Image
-                                    style={{width: 100, height: 100}}
+                                    style={ this.state.selectedImage3 ? styles.imageSelected : styles.image}
                                     source={require('../images/lutning3.png')}
                                 />
                             </TouchableOpacity>
@@ -111,6 +119,15 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
 
 
+    },
+    image:{
+        width: 100,
+        height: 100
+    },
+    imageSelected:{
+        width: 100,
+        height: 100,
+        opacity: 0.5
     },
     imageThings: {
         flex: 1,

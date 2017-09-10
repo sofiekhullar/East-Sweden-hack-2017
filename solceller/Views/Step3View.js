@@ -8,20 +8,52 @@ export default class Step3View extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedImage: 0
+            selectedImage1: false,
+            selectedImage2: false,
+            selectedImage3: false,
+            selectedImage4: false,
+            selectedImage5: false
         }
     };
 
-    _firstHouse(){
-        this.setState({selectedImage:1});
+    firstDir(){
+        this.setState({selectedImage1:false});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:true});
+        this.setState({selectedImage4:true});
+        this.setState({selectedImage5:true});
     }
 
-    _secondHouse(){
-        this.setState({selectedImage:2});
+    secondDir(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:false});
+        this.setState({selectedImage3:true});
+        this.setState({selectedImage4:true});
+        this.setState({selectedImage5:true});
     }
 
-    _thirdHouse(){
-        this.setState({selectedImage:3});
+    thirdDir(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:false});
+        this.setState({selectedImage4:true});
+        this.setState({selectedImage5:true});
+    }
+
+    fourthDir(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:true});
+        this.setState({selectedImage4:false});
+        this.setState({selectedImage5:true});
+    }
+
+    fifthDir(){
+        this.setState({selectedImage1:true});
+        this.setState({selectedImage2:true});
+        this.setState({selectedImage3:true});
+        this.setState({selectedImage4:true});
+        this.setState({selectedImage5:false});
     }
 
     navigate() {
@@ -42,17 +74,17 @@ export default class Step3View extends React.Component {
 
                     <View style={{flex: 1, flexDirection: 'row'}}>
                             <View style={{flex:1, paddingLeft: '13%'}}>
-                                <TouchableOpacity onPress={this.firstHouse}>
+                                <TouchableOpacity onPress={()=>this.firstDir()}>
                                     <Image
-                                        style={{width: size, height: size}}
+                                        style={ this.state.selectedImage1 ? styles.imageSelected : styles.image}
                                         source={require('../images/west.png')}
                                     />
                                 </TouchableOpacity>
                             </View>
                             <View style={{flex:1, paddingLeft: '19%'}}>
-                                <TouchableOpacity onPress={this.secondHouse}>
+                                <TouchableOpacity onPress={()=>this.secondDir()}>
                                     <Image
-                                        style={{width: size, height: size}}
+                                        style={ this.state.selectedImage2 ? styles.imageSelected : styles.image}
                                         source={require('../images/east.png')}
                                     />
                                 </TouchableOpacity>
@@ -60,21 +92,21 @@ export default class Step3View extends React.Component {
                     </View>
 
                     <View style={{flex: 1, flexDirection: 'row'}}>
-                        <TouchableOpacity style={{paddingLeft: '0%'}} onPress={this.thirdHouse}>
+                        <TouchableOpacity style={{paddingLeft: '0%'}} onPress={()=>this.thirdDir()}>
                             <Image
-                                style={{width: size, height: size}}
+                                style={ this.state.selectedImage3 ? styles.imageSelected : styles.image}
                                 source={require('../images/southwest.png')}
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity style={{paddingLeft: '5%'}} onPress={this.thirdHouse}>
+                        <TouchableOpacity style={{paddingLeft: '5%'}} onPress={()=> this.fourthDir()}>
                             <Image
-                                style={{width: size, height: size}}
+                                style={ this.state.selectedImage4 ? styles.imageSelected : styles.image}
                                 source={require('../images/south.png')}
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity style={{paddingLeft: '5%'}}onPress={this.thirdHouse}>
+                        <TouchableOpacity style={{paddingLeft: '5%'}} onPress={()=> this.fifthDir()}>
                             <Image
-                                style={{width: size, height: size}}
+                                style={ this.state.selectedImage5 ? styles.imageSelected : styles.image}
                                 source={require('../images/southeast.png')}
                             />
                         </TouchableOpacity>
@@ -122,6 +154,15 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
 
 
+    },
+    image:{
+        width: 80,
+        height: 80
+    },
+    imageSelected:{
+        width: 80,
+        height: 80,
+        opacity: 0.5
     },
     imageThings: {
         flex: 1,
