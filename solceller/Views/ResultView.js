@@ -21,6 +21,11 @@ class ResultView extends React.Component{
             pengarText: "Du kommer spara y kr per månad."
         };
     }
+
+    navigate() {
+        this.props.navigation.navigate('Home');
+    }
+
     render(){
         return(
 
@@ -96,7 +101,7 @@ const styles = StyleSheet.create({
         flex: 1, // 1:3
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 15,
+        //marginVertical: 15,
     },
     boxOne: {
         flex: 3, // 3:6
@@ -104,8 +109,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
-
-
+    },
+    buttonTextStyle: {
+        color: 'white',
+        fontFamily: 'Helvetica',
+        fontSize: 20
+    },
+    buttonStyle: {
+        backgroundColor: 'green',
+        borderColor: 'green',
+        width: 350,
+        height: 60
     },
     boxTwo: {
         flex: 3, // 1:6
@@ -125,7 +139,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'flex-end',
-        marginHorizontal: 15,
+        //marginHorizontal: 15,
     },
 
     buttonStyle: {
@@ -137,7 +151,7 @@ const styles = StyleSheet.create({
 
 
     baseText: {
-        fontFamily: 'Cochin',
+        //fontFamily: 'Cochin',
         alignItems: 'flex-start',
         flexDirection: 'column'
     },
@@ -145,7 +159,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontFamily: 'Helvetica',
         fontSize: 20,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         paddingBottom: 10
     },
 
