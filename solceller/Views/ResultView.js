@@ -16,9 +16,9 @@ class ResultView extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            mojlighetText: "Du har goda möjligheter för att ha solceller.",
-            energiText: "Du kommer att producera 5500 kWh per år vilket motsvarar 69% av din årliga konsumption.",
-            pengarText: "Du kommer att spara 5775 kr per år. Efter 16 år har du tjänat in din investering."
+            mojlighetText: "You have good prospects for buying solar cells.",
+            energiText: "You will produce 5500 kWh per year which is equivalent to 69% of your yearly consumption.",
+            pengarText: "You will save 5775 SEK per year. After 16 years you will have earned back your investment."
         };
     }
 
