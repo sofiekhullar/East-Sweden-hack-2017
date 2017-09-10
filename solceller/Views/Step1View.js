@@ -44,13 +44,11 @@ class Step1View extends Component {
                     </View>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
-                        <TouchableOpacity disabled={false}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
                                 onPress={() => this.navigate()}
                                 title="Press here!">
                             <Text style={styles.buttonTextStyle}>Nästa</Text>
                         </Button>
-                        </TouchableOpacity>
                     </View>
                 </Image>
             </View>
@@ -127,8 +125,6 @@ const styles = StyleSheet.create({
         borderRadius: 10 ,
         backgroundColor : "#FFFFFF"
     }
-
-
 });
 
 
