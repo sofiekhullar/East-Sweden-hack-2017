@@ -22,7 +22,7 @@ class HomeView extends React.Component{
 
                     <View style={styles.viewStyle}>
                     <TouchableHighlight onPress={() => this.navigate()}>
-                        <Image style={{width: 100, height: 100}} source={require('../images/button-image.png')} />
+                        <Image style={{width: 300, height: 300}} source={require('../images/startbutton.png')} />
                     </TouchableHighlight>
                     </View>
 

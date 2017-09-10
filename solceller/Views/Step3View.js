@@ -41,19 +41,19 @@ export default class Step3View extends React.Component {
 
 
                     <View style={{flex: 1, flexDirection: 'row'}}>
-                            <View style={{flex:1, paddingLeft: '8%'}}>
+                            <View style={{flex:1, paddingLeft: '13%'}}>
                                 <TouchableOpacity onPress={this.firstHouse}>
                                     <Image
                                         style={{width: size, height: size}}
-                                        source={require('../images/lutning1.png')}
+                                        source={require('../images/west.png')}
                                     />
                                 </TouchableOpacity>
                             </View>
-                            <View style={{flex:1, paddingLeft: '25%'}}>
+                            <View style={{flex:1, paddingLeft: '19%'}}>
                                 <TouchableOpacity onPress={this.secondHouse}>
                                     <Image
                                         style={{width: size, height: size}}
-                                        source={require('../images/lutning2.png')}
+                                        source={require('../images/east.png')}
                                     />
                                 </TouchableOpacity>
                             </View>
@@ -63,19 +63,19 @@ export default class Step3View extends React.Component {
                         <TouchableOpacity style={{paddingLeft: '0%'}} onPress={this.thirdHouse}>
                             <Image
                                 style={{width: size, height: size}}
-                                source={require('../images/lutning3.png')}
+                                source={require('../images/southwest.png')}
                             />
                         </TouchableOpacity>
                         <TouchableOpacity style={{paddingLeft: '5%'}} onPress={this.thirdHouse}>
                             <Image
                                 style={{width: size, height: size}}
-                                source={require('../images/lutning3.png')}
+                                source={require('../images/south.png')}
                             />
                         </TouchableOpacity>
                         <TouchableOpacity style={{paddingLeft: '5%'}}onPress={this.thirdHouse}>
                             <Image
                                 style={{width: size, height: size}}
-                                source={require('../images/lutning3.png')}
+                                source={require('../images/southeast.png')}
                             />
                         </TouchableOpacity>
                     </View>
