@@ -67,10 +67,12 @@ export default class Step3View extends React.Component {
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                        <Text style={styles.stepTextStyle}>Steg 3</Text>
-                        <Text style={styles.descriptionTextStyle}>Direction?</Text>
-                    </View>
+                        <Text style={styles.stepTextStyle}>Step 3</Text>
 
+                    </View>
+                    <View style={{flex: 1, flexDirection: 'row'}}>
+                        <Text style={styles.descriptionTextStyle}>What direction is your roof pointed to?</Text>
+                    </View>
 
                     <View style={{flex: 1, flexDirection: 'row'}}>
                             <View style={{flex:1, paddingLeft: '13%'}}>
@@ -114,7 +116,7 @@ export default class Step3View extends React.Component {
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
-                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                            <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
                     </View>
 
@@ -177,14 +179,14 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         fontSize: 20,
         fontWeight: 'bold',
-        paddingTop: 40,
+        paddingTop: 80,
         paddingBottom: 20
     },
     descriptionTextStyle: {
         color: 'white',
         fontFamily: 'Helvetica',
         fontSize: 20,
-        paddingBottom: 60
+        paddingBottom: 10
     },
     buttonTextStyle: {
         color: 'white',

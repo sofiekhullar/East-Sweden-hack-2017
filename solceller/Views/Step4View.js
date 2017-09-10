@@ -19,11 +19,11 @@ class Step4View extends React.Component{
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
                         <Text style={styles.stepTextStyle}>Step 4</Text>
-                        <Text style={styles.descriptionTextStyle}>How many square meters?</Text>
+                        <Text style={styles.descriptionTextStyle}>How many square meters of solar cell panels do you want to install?</Text>
                         <TextInput
                             onChangeText={(inputText) => this.setState({inputText})}
                             // Adding hint in Text Input using Place holder.
-                            placeholder="Fyll i här..."
+                            placeholder="Enter here..."
 
                             // Making the Under line Transparent.
                             underlineColorAndroid='transparent'
@@ -34,7 +34,7 @@ class Step4View extends React.Component{
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
-                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                            <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
                     </View>
                 </Image>
@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
         color: 'white',
         fontFamily: 'Helvetica',
         fontSize: 20,
-        paddingBottom: 60
+        paddingBottom: 60,
+        textAlign: 'center'
     },
     buttonTextStyle: {
         color: 'white',

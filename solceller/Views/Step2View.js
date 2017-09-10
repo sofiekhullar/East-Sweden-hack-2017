@@ -42,8 +42,8 @@ export default class Step2View extends React.Component {
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                        <Text style={styles.stepTextStyle}>Steg 2</Text>
-                        <Text style={styles.descriptionTextStyle}>Vad har du för lutning på ditt tak?</Text>
+                        <Text style={styles.stepTextStyle}>Step 2</Text>
+                        <Text style={styles.descriptionTextStyle}>What is the angle of your roof?</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
@@ -70,9 +70,9 @@ export default class Step2View extends React.Component {
                             </TouchableOpacity>
                         </View>
                         <View style={styles.item2}>
-                            <Text style={{paddingTop:40}}> 0-10 grader </Text>
-                            <Text style={{paddingTop:100}}> 10-30 grader </Text>
-                            <Text style={{paddingTop:90}}> 30-60 grader </Text>
+                            <Text style={{paddingTop:40}}> 0-10 degrees </Text>
+                            <Text style={{paddingTop:100}}> 10-30 degrees </Text>
+                            <Text style={{paddingTop:90}}> 30-60 degrees </Text>
 
                         </View>
                     </View>
@@ -80,7 +80,7 @@ export default class Step2View extends React.Component {
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
-                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                            <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
                     </View>
 

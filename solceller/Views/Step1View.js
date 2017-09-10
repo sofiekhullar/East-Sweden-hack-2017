@@ -23,12 +23,12 @@ class Step1View extends Component {
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                        <Text style={styles.stepTextStyle}>Steg 1</Text>
-                        <Text style={styles.descriptionTextStyle}>Vart bor du?</Text>
+                        <Text style={styles.stepTextStyle}>Step 1</Text>
+                        <Text style={styles.descriptionTextStyle}>Where do you live?</Text>
                         <TextInput
                             onChangeText={(inputText) => this.setState({inputText})}
                             // Adding hint in Text Input using Place holder.
-                            placeholder="Fyll i här..."
+                            placeholder="Enter here..."
 
                             // Making the Under line Transparent.
                             underlineColorAndroid='transparent'
@@ -41,7 +41,7 @@ class Step1View extends Component {
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
                                 onPress={() => this.navigate()}
                                 title="Press here!">
-                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                            <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
                     </View>
                 </Image>
