@@ -19,7 +19,7 @@ class StatsView extends React.Component{
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
                         <Text style={styles.descriptionTextStyle}>This is StatsView</Text>
                     </View>
-                    <Image source={require('../images/faceHappy.png')}/>
+                    <Image style={{width: '70%', height:'70%'}}source={require('../images/stats.png')}/>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>

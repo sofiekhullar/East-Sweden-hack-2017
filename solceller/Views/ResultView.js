@@ -16,7 +16,7 @@ class ResultView extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            mojlighetText: "You have good prospects for buying solar cells.",
+            mojlighetText: "You have good prospects for buying solar cells in your location.",
             energiText: "You will produce 5500 kWh per year which is equivalent to 69% of your yearly consumption.",
             pengarText: "You will save 5775 SEK per year. After 16 years you will have earned back your investment."
         };
@@ -58,15 +58,15 @@ class ResultView extends React.Component{
                             </Text>
                         </View>
                         <View style={[styles.boxContainer, styles.boxTwoTwo]}>
-                            <Image style={{width:128,height:128}}
-                                   source = {require('../images/faceHappy.png')}>
+                            <Image style={{width:138,height:138}}
+                                   source = {require('../images/piechart.png')}>
                             </Image>
 
                         </View>
                     </View>
                     <View style={[styles.boxContainer, styles.boxThree]}>
                         <View style={[styles.boxContainer, styles.boxThreeOne]}>
-                            <Image
+                            <Image style={{width:120,height:120}}
                                 source = {require('../images/bock.png')}>
                             </Image>
                         </View>
