@@ -17,8 +17,8 @@ class ResultView extends React.Component{
         super(props);
         this.state = {
             mojlighetText: "Du har goda möjligheter för att ha solceller.",
-            energiText: "Du kommer producera x kWh per månad.",
-            pengarText: "Du kommer spara y kr per månad."
+            energiText: "Du kommer producera 5500 kWh per år.",
+            pengarText: "Du kommer spara 5775 kr per år."
         };
     }
 
@@ -79,7 +79,7 @@ class ResultView extends React.Component{
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle}
                                 onPress={() => this.navigate()}
                                 title="Press here!">
-                            <Text style={styles.buttonTextStyle}>Nästa</Text>
+                            <Text style={styles.buttonTextStyle}>Done</Text>
                         </Button>
                     </View>
                 </Image>
@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-start',
         backgroundColor: 'rgba(255,255,255,0.5)',
+
     },
     boxThree: {
         flex: 3, // 2:6
@@ -148,6 +149,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
+        marginRight: 10,
     },
     boxTwoOne: {
         flex: 1, // 3:6
@@ -155,6 +157,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
+        marginLeft : 10
     },
     boxTwoTwo: {
         flex: 1, // 3:6
@@ -176,6 +179,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'flex-start',
+        marginRight: 10,
     },
     buttonContainer: {
         flex: 1,
