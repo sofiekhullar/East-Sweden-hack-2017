@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text, StyleSheet, TextInput, Image} from 'react-native';
 import Button from 'apsl-react-native-button'
 
-class Step4View extends React.Component{
+class LoginView extends React.Component{
     constructor(props){
         super(props);
     }
 
     navigate() {
-        this.props.navigation.navigate('Result');
+        this.props.navigation.navigate('StatsView');
     }
 
     render(){
@@ -17,23 +17,25 @@ class Step4View extends React.Component{
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
 
                     <View style={[styles.boxContainer, styles.mainContentContainer]}>
-                        <Text style={styles.stepTextStyle}>Step 4</Text>
-                        <Text style={styles.descriptionTextStyle}>How many square meters of solar cell panels do you want to install?</Text>
-                        <TextInput
-                            onChangeText={(inputText) => this.setState({inputText})}
-                            // Adding hint in Text Input using Place holder.
-                            placeholder="Enter here..."
-
-                            // Making the Under line Transparent.
-                            underlineColorAndroid='transparent'
-
-                            // Calling the custom TextInputStyleClass.
-                            style={styles.TextInputStyleClass}/>
+                        <Text style={styles.descriptionTextStyle}>Please enter your username and password:</Text>
                     </View>
+
+                    <TextInput
+                        onChangeText={(inputText) => this.setState({inputText})}
+                        placeholder="Enter username..."
+                        underlineColorAndroid='transparent'
+                        style={styles.TextInputStyleClass}/>
+
+                    <TextInput
+                        onChangeText={(inputText) => this.setState({inputText})}
+                        secureTextEntry={true}
+                        placeholder="Enter password..."
+                        underlineColorAndroid='transparent'
+                        style={styles.TextInputStyleClass}/>
 
                     <View style={[styles.boxContainer, styles.buttonContainer]}>
                         <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
-                            <Text style={styles.buttonTextStyle}>Next</Text>
+                            <Text style={styles.buttonTextStyle}>Login</Text>
                         </Button>
                     </View>
                 </Image>
@@ -42,12 +44,12 @@ class Step4View extends React.Component{
     };
 }
 
-Step4View.navigationOptions = {
+LoginView.navigationOptions = {
     title: 'Hack solceller sweden',
     header: null
 };
 
-export default Step4View;
+export default LoginView;
 
 const styles = StyleSheet.create({
     container: {

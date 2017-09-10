@@ -1,38 +1,30 @@
 import React from 'react';
-import {View, Text, Button, StyleSheet, Image, TouchableHighlight} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Image} from 'react-native';
+import Button from 'apsl-react-native-button'
 
-class HomeView extends React.Component{
+class StatsView extends React.Component{
     constructor(props){
         super(props);
     }
 
     navigate() {
-        this.props.navigation.navigate('Step1View');
+        this.props.navigation.navigate('Home');
     }
-    login(){
-        console.log('Login should be here');
-        this.props.navigation.navigate('Login');
-    }
+
     render(){
         return(
             <View style={styles.container}>
                 <Image source={require('../images/background.png')} style={styles.imageThings} >
-                    <View style={styles.viewStyle}>
-                        <Image source={require('../images/logo.png')} style={{width: 200, height: 39}} >
-                        </Image>
+
+                    <View style={[styles.boxContainer, styles.mainContentContainer]}>
+                        <Text style={styles.descriptionTextStyle}>This is StatsView</Text>
                     </View>
 
-                    <View style={styles.viewStyle}>
-                    <TouchableHighlight onPress={() => this.navigate()}>
-                        <Image style={{width: 300, height: 300}} source={require('../images/startbutton.png')} />
-                    </TouchableHighlight>
-                    </View>
 
-                    <View style={styles.viewStyle}>
-                    <Button style={styles.buttonStyle} textStyle={styles.textStyle}
-                            onPress={() => this.login()}
-                            title="Login here">
-                    </Button>
+                    <View style={[styles.boxContainer, styles.buttonContainer]}>
+                        <Button style={styles.buttonStyle} textStyle={styles.textStyle} onPress={()=> this.navigate()}>
+                            <Text style={styles.buttonTextStyle}>Back</Text>
+                        </Button>
                     </View>
                 </Image>
             </View>
@@ -40,22 +32,27 @@ class HomeView extends React.Component{
     };
 }
 
-HomeView.navigationOptions = {
+StatsView.navigationOptions = {
     title: 'Hack solceller sweden',
     header: null
 };
 
-export default HomeView;
+export default StatsView;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
     },
-    viewStyle: {
+    boxContainer: {
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    mainContentContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     buttonContainer: {
         flex: 1,
@@ -75,14 +72,14 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         fontSize: 20,
         fontWeight: 'bold',
-        paddingBottom: 10,
-        alignSelf: 'flex-start'
+        paddingBottom: 10
     },
     descriptionTextStyle: {
         color: 'white',
         fontFamily: 'Helvetica',
         fontSize: 20,
-        paddingBottom: 60
+        paddingBottom: 60,
+        textAlign: 'center'
     },
     buttonTextStyle: {
         color: 'white',
@@ -105,4 +102,3 @@ const styles = StyleSheet.create({
         backgroundColor : "#FFFFFF"
     }
 });
-

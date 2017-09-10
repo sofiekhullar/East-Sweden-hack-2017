@@ -8,7 +8,8 @@ import Step4View from './Views/Step4View';
 
 import HomeView from './Views/HomeView';
 import ResultView from './Views/ResultView';
-
+import LoginView from "./Views/LoginView";
+import StatsView from './Views/StatsView';
 
 const SimpleStack = StackNavigator({
     Home: {
@@ -34,6 +35,14 @@ const SimpleStack = StackNavigator({
         path: 'photos/:name',
         screen: ResultView,
     },
+    Login: {
+        path: 'photos/:name',
+        screen: LoginView,
+    },
+    StatsView: {
+        path: 'photos/:name',
+        screen: StatsView,
+    }
 });
 
 export default SimpleStack;
