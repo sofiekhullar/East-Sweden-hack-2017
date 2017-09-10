@@ -17,6 +17,10 @@ class Step1View extends Component {
         this.props.navigation.navigate('Step2View', { address: this.state.inputText });
     }
 
+    navigateBack(){
+        this.props.navigation.navigate('Home');
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -43,6 +47,7 @@ class Step1View extends Component {
                                 title="Press here!">
                             <Text style={styles.buttonTextStyle}>Next</Text>
                         </Button>
+                        <Text style={{marginBottom:"5%"}} onPress={() => this.navigateBack()}>Back</Text>
                     </View>
                 </Image>
             </View>
